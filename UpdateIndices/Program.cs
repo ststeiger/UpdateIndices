@@ -15,7 +15,7 @@ namespace UpdateIndices
             dir = System.IO.Path.Combine(dir, fileName);
 
             return dir;
-        }
+        } // End Function MapVisualStudioPath 
 
 
         /// <summary>
@@ -63,17 +63,17 @@ namespace UpdateIndices
                     System.Console.WriteLine(System.Environment.NewLine);
 
                     counter++;
-                }
+                } // Whend
 
                 file.Close();
-            }
+            } // End Using file 
             
             System.Console.WriteLine(" === Press any key to continue === ");
             System.Console.ReadKey();
-        }
+        } // End Sub Main 
 
 
-    }
+    } // End Class Program
 
 
-}
+} // End Namespace UpdateIndices

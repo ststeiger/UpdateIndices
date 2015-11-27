@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace UpdateIndices
 {
+
+
     class SQL
     {
 
@@ -16,7 +15,7 @@ namespace UpdateIndices
             csb.IntegratedSecurity = true;
 
             return csb.ConnectionString;
-        }
+        } // End Function GetConnectionString
 
 
         public static int ExecuteNonQuery(string strSQL)
@@ -49,9 +48,10 @@ namespace UpdateIndices
             }
 
             return retVal;
-        }
+        } // End FUnction ExecuteNonQuery 
 
 
+    } // End Class SQL 
 
-    }
-}
+
+} // End Namespace UpdateIndices 
