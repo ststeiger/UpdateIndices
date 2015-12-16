@@ -1,4 +1,7 @@
 
+DECLARE @mytable sysname = N'T_ZO_SYS_Metadatenrechte_Benutzergruppe'
+
+
 DECLARE @SchemaName VARCHAR(256)DECLARE @TableName VARCHAR(256)
 DECLARE @IndexName VARCHAR(256)
 DECLARE @TSQLDropIndex VARCHAR(MAX)
@@ -9,6 +12,7 @@ DECLARE CursorIndexes CURSOR FOR
 		 schema_name(t.schema_id)
 		,t.name
 		,i.name 
+		--,*
 	FROM sys.indexes AS i
 	INNER JOIN sys.tables AS t 
 		ON t.object_id = i.object_id 
@@ -21,6 +25,7 @@ DECLARE CursorIndexes CURSOR FOR
 		AND 
 		is_unique_constraint = 0
 	) 
+	AND t.name = @mytable 
 )
 OPEN CursorIndexes
 FETCH NEXT FROM CursorIndexes INTO @SchemaName,@TableName,@IndexName

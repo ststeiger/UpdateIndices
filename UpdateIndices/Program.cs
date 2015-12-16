@@ -31,7 +31,7 @@ namespace UpdateIndices
                 System.Windows.Forms.Application.EnableVisualStyles();
                 System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
                 System.Windows.Forms.Application.Run(new Form1());
-            }
+            } // End if (false) 
 
 
             int counter = 0;
@@ -52,7 +52,6 @@ namespace UpdateIndices
                     if(System.StringComparer.InvariantCultureIgnoreCase.Equals(line, "GO"))
                         continue;
 
-
                     System.Console.WriteLine(line);
                     int retVal = SQL.ExecuteNonQuery(line);
                     if(retVal == -1)
@@ -63,7 +62,7 @@ namespace UpdateIndices
                     System.Console.WriteLine(System.Environment.NewLine);
 
                     counter++;
-                } // Whend
+                } // Whend 
 
                 file.Close();
             } // End Using file 
@@ -73,7 +72,7 @@ namespace UpdateIndices
         } // End Sub Main 
 
 
-    } // End Class Program
+    } // End Class Program 
 
 
-} // End Namespace UpdateIndices
+} // End Namespace UpdateIndices 

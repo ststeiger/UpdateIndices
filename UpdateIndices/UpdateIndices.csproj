@@ -74,8 +74,11 @@
   <ItemGroup>
     <Content Include="AllMissingIndices.sql" />
     <Content Include="SQL\CreateIndexIfNotExists.sql" />
+    <Content Include="SQL\Create_FK_Indices.sql" />
     <Content Include="SQL\Drop_ALL_Indices.sql" />
     <Content Include="SQL\FindMissingIndices.sql" />
+    <Content Include="SQL\OneTable\Create_FK_Indices_For_Table.sql" />
+    <Content Include="SQL\OneTable\DROP_Table_Indices.sql" />
     <Content Include="SQL\RechteIndex.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
